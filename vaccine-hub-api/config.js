@@ -14,6 +14,8 @@ function getDataBaseURL(){
     return process.env.DATABASE_URL || `postgresql://${dbuser}:${dbpass}@${dbhost}:${dbport}/${dbname}`
 }
 
+const BCRYPT_WORK_FACTOR = 13
+
 console.log("process.env", Object.keys(process.env))
 console.log("App Config")
 console.log("PORT:", PORT)
@@ -22,5 +24,6 @@ console.log("---")
 
 module.exports = {
     PORT,
-    getDataBaseURL
+    getDataBaseURL,
+    BCRYPT_WORK_FACTOR
 }
