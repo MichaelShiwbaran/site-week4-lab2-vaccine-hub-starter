@@ -11,7 +11,7 @@ function getDataBaseURL(){
     const dbname = process.env.DATABASE_NAME || "vaccine_hub"
 
 
-    return process.env.DATABASE_URL || `postgresql://${dbuser}:${dbpass}@${dbhost}:${dbport}/:${dbname}`
+    return process.env.DATABASE_URL || `postgresql://${dbuser}:${dbpass}@${dbhost}:${dbport}/${dbname}`
 }
 
 console.log("process.env", Object.keys(process.env))
